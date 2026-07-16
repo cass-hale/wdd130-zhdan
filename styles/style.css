@@ -150,3 +150,7 @@ footer {
     grid-column: 1 / 6;
     grid-row: 2 / 3;
 }
+
+#nebula_main h1, p {
+    text-align: center;
+}
