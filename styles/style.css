@@ -90,8 +90,8 @@ footer {
     margin-top: 30px;
     flex-shrink: 0;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
 }
 
 .footer-nav {
@@ -193,12 +193,4 @@ footer {
     justify-content: center;
     margin: 0 auto;
     width: 50%;
-}
-
-#saturn {
-
-}
-
-#mars {
-
 }
