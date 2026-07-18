@@ -1,8 +1,11 @@
 body {
-    display: grid;
+    display: block;
     background-color: #0B0F19;
     color: #E2E8F0;
     font-family: "Plus Jakarta Sans", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
@@ -21,10 +24,10 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-h1 {
-    display: grid;
+.home-title {
+    display: block;
     font-family: "Space Grotesk";
-    grid-column: 2/3;
+    text-align: center;
 }
 
 header {
@@ -32,6 +35,8 @@ header {
     background-color: #38BDF8;
     padding: 10px;
     margin-bottom: 20px;
+    border: solid 4px #a855f7;
+    border-radius: 10px;
 }
 
 nav a {
@@ -48,38 +53,41 @@ nav a:hover {
 }
 
 #hero {
+    display: block;
+    width: 100%;
     margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     margin-top: 20px;
 }
 
 #hero-img {
-    width: 100%;
-    height: 250px;
+    display: block;
+    width: 1190px;
+    height: 300px;
     margin-bottom: 20px;
-    justify-content: center;
-    margin-top: 10px;
+    justify-items: center;
     border-radius: 10px;
     opacity: 0.65;
 }
 
 #hero-msg {
-    display: grid;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
+    display: block;
+    justify-content: left;
+    margin-right: 800px;
+    margin-top: 150px;
+    text-align: center;
 }
 
 #satellite {
-    width: 100%;
-    height: 250px;
+    display: block;
+    width: auto;
+    height: 500px;
     margin-bottom: 20px;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin-top: -250px;
     opacity: 0.65;
+    justify-content: right;
+    margin-left: 450px;
+    border-radius: 10px;
 }
 
 
@@ -89,8 +97,10 @@ footer {
     margin-top: 30px;
     flex-shrink: 0;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    border: solid 4px #a855f7;
+    border-radius: 10px;
 }
 
 .footer-nav {
@@ -114,7 +124,7 @@ footer {
 
 .footer-logo {
     display: grid;
-    width: 200px;
+    width: 300px;
     height: auto;
     justify-content: left;
     grid-column: 1 / 2;
@@ -148,4 +158,48 @@ footer {
     justify-content: center;
     grid-column: 1 / 6;
     grid-row: 2 / 3;
+}
+
+#nebula_main h1, #nebula_main p {
+    text-align: center;
+}
+
+#planets-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(4, 1fr); */
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#planets-heading {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#planets-text {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+#earth, #saturn, #mars {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#earth {
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
 }
